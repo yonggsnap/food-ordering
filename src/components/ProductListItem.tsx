@@ -22,25 +22,24 @@ export default function ProductListItem({ product }: ProductListItemProps) {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    // alignItems: "center",
-    // justifyContent: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     padding: 10,
     borderRadius: 20,
+    overflow: "hidden",
+    flex: 1
   },
   title: {
     fontSize: 18,
     fontWeight: "600",
     marginVertical: 10,
-    color: "black",
   },
   price: {
     color: Colors.light.tint,
     fontWeight: "bold",
   },
   image: {
-    width: 200,
-    height: 200,
+    width: '100%',
+    aspectRatio: 1,
+    alignSelf: "center",
   },
 });
