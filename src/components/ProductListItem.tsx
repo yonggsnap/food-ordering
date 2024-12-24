@@ -13,7 +13,11 @@ interface ProductListItemProps {
 export default function ProductListItem({ product }: ProductListItemProps) {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: product.image || defaultPizzaImage }} />
+      <Image
+        style={styles.image}
+        source={{ uri: product.image || defaultPizzaImage }}
+        resizeMode="contain"
+      />
       <Text style={styles.title}>{product.name}</Text>
       <Text style={styles.price}>${product.price}</Text>
     </View>
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     overflow: "hidden",
     flex: 1,
-    maxWidth: '50%', // Takes care of edge case if the number of products is odd
+    maxWidth: "50%", // Takes care of edge case if the number of products is odd
   },
   title: {
     fontSize: 18,
@@ -39,7 +43,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   image: {
-    width: '100%',
+    width: "100%",
     aspectRatio: 1,
     alignSelf: "center",
   },
