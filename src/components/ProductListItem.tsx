@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
     overflow: "hidden",
-    flex: 1
+    flex: 1,
+    maxWidth: '50%', // Takes care of edge case if the number of products is odd
   },
   title: {
     fontSize: 18,
